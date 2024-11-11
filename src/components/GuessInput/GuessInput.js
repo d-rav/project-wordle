@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GuessInput({ submitGuess }) {
+function GuessInput({ submitGuess, isDisabled = false }) {
   const [guessValue, setGuessValue] = React.useState('');
   return (
     <form
@@ -15,6 +15,7 @@ function GuessInput({ submitGuess }) {
       <input
         id="guess-input"
         type="text"
+        disabled={isDisabled}
         minLength={5}
         maxLength={5}
         pattern="[A-Z]{5}"
