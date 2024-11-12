@@ -6,7 +6,7 @@ function GameOverBanner({ status, guessCount }) {
     <div className={`${status === 'win' ? 'happy' : 'sad'} banner`}>
       {status === 'win' && (
         <p>
-          <strong>Congratulations!</strong> Got it in
+          <strong>Congratulations!</strong> Got it in{' '}
           <strong>
             {guessCount} {guessCount === 1 ? 'guess' : 'guesses'}
           </strong>
